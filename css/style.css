@@ -12,15 +12,136 @@
 /*grid layout*/
 .grid-container{
     display: grid;
-    grid-template-columns: 50px 50px;
-    grid-template-rows: 50px 50px;
-  /*  grid-template:  50px 50px/50px 50px; /* shortand for above
+    grid-template-columns: 100px 100px 100px;/*explicit col declaration*/
+    grid-template-rows: 100px 100px 100px;
+  /*  grid-template:  100px 100px 100px/100px 100px 100px; /* shortand for above
   value before "/" represents rows and after represent cols*/
-  grid-auto-rows: 50px;
+  grid-auto-rows: 50px;/* determine height of row for items overflow or implicit row declarations*/
+
   /*column-gap: 10px;
-   row-gap: 100px;*/
-   gap: 100px 10px; /*shorthand for above two lines setting gap*/
+   row-gap: 5px;*/
+   gap: 5px 10px; /*shorthand for above two lines setting gap*/
 }
-.card{
-    border: 1px solid blue;
+.item{
+    border: 2px solid black;
+    background-color: orange;
+    text-align: center;
+}
+.first-row{
+    background-color: pink;
+}
+.last-column{
+   background-color: lightblue;
+}
+/*aprtment floor plan example*/
+/*
+.apartment{
+    display: inline-grid; /*  avoids the the container gaid from streching to take up space
+    grid-template: 60px 60px 60px 60px 60px/60px 60px 60px 60px 60px;
+    background-color: lightblue;
+}
+.room{
+    border: 1px solid;
+    font-size: 50%;
+    text-align: center;
+}
+#living-room{
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 3;
+
+}
+#kitchen{
+    grid-column: 4/6;
+    grid-row: 3/5;
+}
+#bedroom{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 5;
+}
+#bathroom{
+    grid-column: 3/6; /*shortand notation
+    grid-row: 5/6;
+}
+#closet{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 5;
+    grid-row-end: 6;
+}
+*/
+/* or we can use grid-area to place e/ts in specific grid areas*/
+.apartment{
+    display:inline-grid; 
+    background-color: lightblue;
+    grid-template: 60px 60px 60px 60px 60px /60px 60px 60px 60px 60px;
+    grid-template-areas: "living-room living-room living-room living-room living-room"
+                         "living-room living-room living-room living-room living-room"
+                         "bed-room bed-room bath-room kitchen kitchen"
+                         "bed-room bed-room bath-room kitchen kitchen"
+                         "closet closet bath-room kitchen kitchen";
+}                   
+.room{
+    border: 1px solid;
+    font-size: 50%;
+    text-align: center;
+} 
+#living-room{
+    grid-area: living-room;
+}
+#kitchen{
+    grid-area: kitchen;
+}
+#bedroom{
+    grid-area: bed-room;
+}
+#bathroom{
+    grid-area: bath-room;
+}
+#closet{
+    grid-area: closet;
+}
+
+/* grid -line based placement demo*/
+.wrapper{
+    background-color: blueviolet;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,100px);
+}
+.box1{
+    background-color: blanchedalmond;
+    border: 1px solid;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 4;
+}
+.box2{
+    background-color: rgb(234, 236, 91);
+    border: 1px solid;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+   
+}
+.box3{
+    background-color: rgb(112, 236, 11);
+    border: 1px solid;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2; 
+}
+.box4{
+    background-color: rgb(11, 34, 236);
+    border: 1px solid;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4; 
 }
