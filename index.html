@@ -11,10 +11,21 @@
 
 <body>
     <div class="container">
-        <div class="header">Header</div>
+        <div class="header">
+            <nav class="main-nav" id="main-nav" role="navigation">
+                <ul id="main-nav-list">
+                    <li><a href="#"><div>Home <span>easy access</span></div></a></li>
+                    <li><a href="#"><div>About <span>our association</span></div></a></li>
+                    <li><a href="#"><div>Courses <span>custom made 4u</span></div></a></li>
+                    <li><a href="#"><div>Contact <span>look us up</span></div></a></li>
+
+                    
+                </ul>
+            </nav>
+        </div>
         <div class="sidebar">Side bar</div>
-        <div class="nav">Nav</div>
-        <div class="article">Articles
+        
+        <div class="article">
             <h1>GRID </h1>
             <h3>flex review</h3>
             <div class="flex-container">
@@ -22,6 +33,25 @@
                 <div class="two">div two</div>
                 <div class="three">div three</div>
                 <div class="four">div four</div>
+            </div>
+            <div class="options">
+                <label for="menu-items-position">Flex Container(Justify-content)</label>
+                <select name="" id="menu-items-position">
+                    <option value="flex-start">flex-start</option>
+                    <option value="flex-end">flex-end</option>
+                    <option value="space-between">space-between</option>
+                    <option value="space-around">space-around</option>
+                </select>
+                <label for="menu-items">Flex Items(flex)</label>
+                <select name="" id="menu-items">
+                    <option value="0 1 auto">0 1 auto(default)</option>
+                    <option value="0 1 auto">1 1 auto</option>
+                </select>
+                <label for="show">Show</label>
+                <select name="" id="show">
+                    <option value="">normal</option>
+                    <option value="outlines">outlines</option>
+                </select>
             </div>
             <h3>Grid technique</h3>
             <div class="grid-container">
@@ -49,6 +79,24 @@
                 <div class="box2">Two</div>
                 <div class="box3">Three</div>
                 <div class="box4">Four</div>
+            </div>
+            <h3>using flexbox and grid</h3>
+            <div class="layout">
+                <div class="child">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="child">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="child last-row">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
             </div>
             
         </div>
