@@ -1,0 +1,82 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #a39f9f;
+}
+.container{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 4fr;
+    gap: 5px;
+}
+.sidebar{
+    background-color: #5da8e6;
+    grid-row: 1/4;
+    color: white;
+    font: bold;
+}
+.sidebar ul{
+    list-style-type: none;
+}
+.sidebar ul li a{
+    text-decoration:none;
+    color: white;
+}
+.header{
+    background-color: #fafafa;
+    padding-top: 1rem;
+    grid-column: 2;
+    height: 7rem;
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+}
+.top_nav{
+    grid-column: 1;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.Second_nav{
+    grid-column: 1;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.header ul{
+    list-style: none;
+    display: flex;
+}
+.header ul li{
+    padding: 5px;
+}
+button{
+    background-color: #175b92;
+   border: none;
+   border-radius: 6px;
+}
+button a{
+    text-decoration: none;
+    color: #fff;
+    padding: 2rem;
+}
+.main_content{
+    background-color: #c4bfbf;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 10px;  
+}
+.title_1{
+    grid-column: 1/3;
+    height: 20px;
+}
+.projects{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 10px;
+}
+.card{
+    background-color: #fafafa;
+    text-align: justify;
+    padding: 5px;
+    border: 2px solid #343435;
+    font-size: 12px;
+}
